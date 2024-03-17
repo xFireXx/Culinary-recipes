@@ -1,0 +1,42 @@
+section {
+  border: 1px solid black;
+  width: 85vw;
+}
+
+.btn-search {
+    background: #39db4a;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+
+.input-name {
+  border: 1px solid #d0d4d9;
+  border-radius: 8px;
+  padding: 5px;
+  line-height: 14px;
+  width: 80%;
+  background: #fff;
+}
+
+::placeholder {
+    color: #999;
+    opacity: 1; /* Firefox */
+  }
+
+  select {
+    color: #999;
+  }
+
+  
+.box-kcal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 86%;
+}

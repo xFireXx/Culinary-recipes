@@ -1,0 +1,43 @@
+.box-dish {
+  width: 60%;
+  height: 100%;
+  -webkit-box-shadow: 11px 17px 9px -15px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 11px 17px 9px -15px rgba(0, 0, 0, 1);
+  box-shadow: -1px 9px 9px -6px rgb(0, 0, 0)
+}
+
+.btn-edit {
+  background: #39db4a;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  width: 187px;
+}
+
+.btn-detail {
+  background: #1D93E8;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+}
+
+.text-name {
+    font-size: 30px;
+}
+
+.text-category {
+    color: #555555;
+    font-size: 24px;
+}
+
+.margins {
+    margin-right: auto;
+    margin-left: auto;
+}
