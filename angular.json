@@ -89,6 +89,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "culinary-recipes:build:production",
+              "serveTarget": "culinary-recipes:serve:production"
+            },
+            "development": {
+              "buildTarget": "culinary-recipes:build:development",
+              "serveTarget": "culinary-recipes:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

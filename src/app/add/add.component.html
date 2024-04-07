@@ -1,0 +1,61 @@
+<h1 class="add-headline">Dodaj potrawę</h1>
+
+<div class="box-form">
+  <form #productForm="ngForm" (ngSubmit)="submit()">
+    <div class="file-upload-wrapper">
+      <input
+        type="file"
+        #fileUpload
+        hidden
+        (change)="handleFileInput($event)"
+      />
+      <input
+        type="text"
+        #fileUploadText
+        class="file-upload-text"
+        placeholder="Wybierz plik..."
+        readonly
+        (click)="fileUpload.click()"
+      />
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="product.name"
+      name="name"
+      placeholder="Nazwa"
+      required
+    />
+    <input
+      type="text"
+      [(ngModel)]="product.category"
+      name="category"
+      placeholder="Kategoria"
+      required
+    />
+    <div class="box-ingredients">
+      <input #ingredientInput type="text" placeholder="Składnik" required />
+      <button
+        type="button"
+        class="add-btn-ingredients"
+        (click)="
+          addIngredient(ingredientInput.value); ingredientInput.value = ''
+        "
+      >
+        +
+      </button>
+    </div>
+    <div *ngFor="let ingredient of product.ingredients; let i = index">
+      {{ ingredient }}
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="product.calories"
+      name="calories"
+      placeholder="Kaloryczność"
+      required
+    />
+    <button type="submit" class="add-btn">Dodaj</button>
+  </form>
+  <p id="success"></p>
+  <div id="error" style="color: red;"></div>
+</div>

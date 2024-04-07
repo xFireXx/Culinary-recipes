@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "culinary-e5f78": {
+      "hosting": {
+        "culinary-recipes": [
+          "culinary-e5f78"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "culinary-e5f78"
+  }
+}
