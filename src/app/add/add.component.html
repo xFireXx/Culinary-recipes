@@ -1,5 +1,4 @@
 <h1 class="add-headline">Dodaj potrawę</h1>
-
 <div class="box-form">
   <form #productForm="ngForm" (ngSubmit)="submit()">
     <div class="file-upload-wrapper">
@@ -33,7 +32,7 @@
       required
     />
     <div class="box-ingredients">
-      <input #ingredientInput type="text" placeholder="Składnik" required />
+      <input #ingredientInput type="text" placeholder="Składnik" required style="width:863px"/>
       <button
         type="button"
         class="add-btn-ingredients"
@@ -55,7 +54,7 @@
       required
     />
     <button type="submit" class="add-btn">Dodaj</button>
+    <p id="success"></p>
+    <div id="error" style="color: red;"></div>
   </form>
-  <p id="success"></p>
-  <div id="error" style="color: red;"></div>
 </div>

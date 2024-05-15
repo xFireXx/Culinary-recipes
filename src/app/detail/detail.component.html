@@ -1,0 +1,27 @@
+<h1 class="add-headline">Szczegóły potrawy</h1>
+<div class="box-form" *ngIf="product; else notFoundTemplate">
+    <div class="d-flex flex-row justify-content-between dish align-items-center">
+        <h1>Nazwa potrawy:</h1>
+        <h1>{{ product!.name }}</h1>
+    </div>
+   <div class="d-flex flex-row justify-content-between mt-2 dish align-items-center">
+    <h1>Kategoria:</h1><h1>{{ product!.category }}</h1>
+   </div>
+   <div class="d-flex flex-row justify-content-between mt-2 dish align-items-center">
+    <h1>Kalorie:</h1><h1>{{ product!.calories }}</h1>
+   </div>
+   <div class="mt-2 dish d-flex flex-row justify-content-between align-items-center">
+    <h1>Składniki:</h1>
+    <ul>
+      <li *ngFor="let ingredient of product!.ingredients"><h1>{{ ingredient }}</h1></li>
+    </ul>
+   </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <a routerLink="/">Powrót do strony głównej</a>
+</div>
+
+  <ng-template #notFoundTemplate>
+    <p>Product not found!</p>
+  </ng-template>

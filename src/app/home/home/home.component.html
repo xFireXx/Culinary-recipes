@@ -1,9 +1,16 @@
 <app-navigation></app-navigation>
-<img src="../../../assets/burger.png" alt="food" class="img-fluid" />
-<div class="d-flex justify-content-center">
-  <app-search></app-search>
+<img src="../../../assets/vegetable.jpg" alt="food" class="img-fluid-home" />
+<h2>Przepisy kulinarne</h2>
+<div class="d-flex justify-content-center" id="search">
+  <app-search (searchEvent)="filterProducts($event)"></app-search>
 </div>
-  <app-box-dish class="d-flex justify-content-center" *ngFor="let product of products" [image]="product.image" [name]="product.name" [category]="product.category"></app-box-dish>
+<div class="row">
+  <div class="col-12 col-lg-3" *ngFor="let product of filteredProducts">
+    <app-box-dish id="lista" class="d-flex justify-content-center" [id]="product.id" [image]="product.image" [name]="product.name" [category]="product.category"></app-box-dish>
+  </div>
+</div>
 
-<app-pagination></app-pagination>
+
+
+<!-- <app-pagination></app-pagination> -->
 <footer><p>Aplikacja napisana przez Macieja Tredera</p></footer>

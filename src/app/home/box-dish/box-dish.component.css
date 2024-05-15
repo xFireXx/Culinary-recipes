@@ -1,9 +1,10 @@
 .box-dish {
-  width: 60%;
+  width: 88%;
   height: 100%;
   -webkit-box-shadow: 11px 17px 9px -15px rgba(0, 0, 0, 1);
   -moz-box-shadow: 11px 17px 9px -15px rgba(0, 0, 0, 1);
-  box-shadow: -1px 9px 9px -6px rgb(0, 0, 0)
+  box-shadow: -1px 9px 9px -6px rgb(0, 0, 0);
+  background: #fff;
 }
 
 .btn-edit {

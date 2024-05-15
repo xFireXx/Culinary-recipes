@@ -3,3 +3,27 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+
+.img-fluid-home {
+    width: 100%;
+    height: auto;
+    filter: brightness(50%); /* Ustaw jaśniejszość na 50% pierwotnej wartości */
+}
+
+@media screen and (min-width: 1200px) {
+    .img-fluid-home {
+        width: 100%;
+        height: 555px;
+    }
+}
+
+
+h2 {
+    position: absolute;
+    font-size: 48px;
+    top: 322px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}

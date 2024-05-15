@@ -1,6 +1,7 @@
 section {
   border: 1px solid black;
   width: 85vw;
+  background-color: #fff;
 }
 
 .btn-search {
@@ -38,5 +39,5 @@ section {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 86%;
+  width: 80%;
 }

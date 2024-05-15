@@ -1,0 +1,31 @@
+<h1 class="add-headline">Edytuj potrawę</h1>
+<div *ngIf="productForm" class="box-form">
+  <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <div class="form-group">
+      <label for="name">Nazwa:</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="category">Kategoria:</label>
+      <input type="text" id="category" class="form-control" formControlName="category">
+    </div>
+    <div class="form-group">
+      <label for="calories">Kalorie:</label>
+      <input type="number" id="calories" class="form-control" formControlName="calories">
+    </div>
+    <div class="form-group">
+      <label>Składniki:</label>
+      <div *ngFor="let ingredient of ingredients.controls; let i=index">
+        <input type="text" [formControlName]="i" class="form-control">
+        <button type="button" class="remove-btn-ingredients" (click)="removeIngredient(i)">-</button>
+      </div>
+      <button type="button" class="add-btn-ingredients mt-3" (click)="addIngredient()">+</button>
+    </div>
+    <div class="form-group">
+      <label for="image">Obraz:</label>
+      <input type="file" (change)="onFileChange($event)" class="form-control">
+      <img class="mt-2" *ngIf="productForm.get('image')?.value" [src]="productForm.get('image')?.value" height="200">
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Zapisz zmiany</button>
+  </form>
+</div>

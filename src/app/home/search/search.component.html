@@ -1,22 +1,21 @@
 <section class="mt-5 d-flex justify-content-center flex-column">
     <h2 class="text-center mb-3 text-uppercase bold mt-1">Wyszukaj potrawę</h2>
-    <div class="d-flex flex-column align-items-center">
-        <select class="mt-3 input-name" placeholder="fds" (change)="changeColor($event)">
-            <option value="" disabled selected hidden>Wybierz kategorię</option>
-            <option value="all">Wszystkie</option>
-            <option value="breakfast">Śniadanie</option>
-            <option value="dinner">Obiad</option>
-            <option value="supper">Kolacja</option>
-        </select>
-        <input type="text" class="mt-3 input-name" placeholder="Wpisz nazwę">
-        <div class="box-kcal">
-            <span>Od</span>
-            <input type="text" class="mt-3 input-name" placeholder="Od" style="width: 28%">
-            <span>Do</span>
-            <input type="text" class="mt-3 input-name" placeholder="Do" style="width: 28%">
-        </div>
-        <input type="text" class="mt-3 input-name" placeholder="Wpisz składnik">
-
-        <button class="mt-3 btn-search">Szukaj</button>
+    <div class="d-flex flex-column align-items-center mb-2">
+      <select class="mt-3 input-name" [(ngModel)]="category" (change)="emitSearch()">
+        <option value="" disabled selected hidden>Wybierz kategorię</option>
+        <option value="all">Wszystkie</option>
+        <option value="Śniadanie">Śniadanie</option>
+        <option value="Obiad">Obiad</option>
+        <option value="Kolacja">Kolacja</option>
+      </select>
+      <input type="text" class="mt-3 input-name" placeholder="Wpisz nazwę" [(ngModel)]="name" (input)="emitSearch()">
+      <div class="box-kcal">
+        <span style="margin-top: 15px">Od</span>
+        <input type="number" class="mt-3 input-name" placeholder="Kcal" [(ngModel)]="kcalMin" (input)="emitSearch()">
+        <span style="margin-top: 15px;">Do</span>
+        <input type="number" class="mt-3 input-name" placeholder="Kcal" [(ngModel)]="kcalMax" (input)="emitSearch()">
+      </div>
+      <input type="text" class="mt-3 mb-5 input-name" placeholder="Wpisz składnik" [(ngModel)]="ingredient" (input)="emitSearch()">
     </div>
-</section>
+  </section>
+  

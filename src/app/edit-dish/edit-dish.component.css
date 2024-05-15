@@ -1,0 +1,47 @@
+.add-headline {
+    color: #000;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .box-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    justify-content: center;
+    top: 35%;
+    left: 50%;
+    width: 1000px;
+    padding: 40px;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+    box-shadow: 9px 24px 8px -20px rgb(66, 68, 90);
+  }
+
+  .add-btn-ingredients {
+    border-radius: 46px;
+    padding: 1px;
+    color: #fff;
+    background: #1D93E8;
+    border: 0;
+    width: 40px;
+    font-weight: 600;
+    height: 40px;
+  }
+
+  .remove-btn-ingredients {
+    border-radius: 46px;
+    padding: 1px;
+    color: #fff;
+    background: red;
+    border: 0;
+    width: 40px;
+    font-weight: 600;
+    height: 40px;
+  }
